@@ -15,7 +15,7 @@ This repository contains implementations of various sorting algorithms in C.
 - [0-main.c](0-main.c) - Main function to test the bubble sort.
 - [bubble_sort_complexity](0-O) - Bubble sort complexity analysis.
 
-## Usage
+### Usage
 
 Compile the code:
 
@@ -32,7 +32,7 @@ gcc -Wall -Wextra -Werror -pedantic  -std=gnu89  0-main.c print_array.c .\0-bubb
 - [2-main.c](2-main.c) - Main function to test the Selection sort.
 - [selection_sort_complexity](2-O) - Selection sort complexity analysis.
 
-## Usage
+### Usage
 
 Compile the code:
 
