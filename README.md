@@ -4,8 +4,9 @@ This repository contains implementations of various sorting algorithms in C.
 
 ## Implemented Algorithms
 
-1. [Bubble Sort](#bubble-sort)
+0. [Bubble Sort](#bubble-sort)
 2. [Selection Sort](#selection-sort)
+3. [Shell Sort](#shell-sort)
 
 ## Bubble Sort
 
@@ -41,5 +42,19 @@ gcc -Wall -Wextra -Werror -pedantic  -std=gnu89 2-main.c 2-selection_sort.c prin
 ./select
 ```
 
+## Shell Sort
 
+### Files
+
+- [100-shell_sort.c](100-shell_sort.c) - Shell sort implementation.
+- [100-main.c](100-main.c) - Main function to test the Shell sort.
+
+### Usage
+
+Compile the code:
+
+```bash
+gcc -Wall -Wextra -Werror -pedantic  -std=gnu89 100-main.c 100-shell_sort.c print_array.c -o shell
+./shell
+```
 
