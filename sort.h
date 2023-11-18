@@ -29,7 +29,7 @@ void swap_inds(int *array, int ind1, int ind2);
 void selection_sort(int *array, size_t size);
 int minIndex(int *array, size_t start, size_t end);
 void shell_sort(int *array, size_t size);
-void swap_nodes(listint_t **head,listint_t *first, listint_t *second);
+void swap_nodes(listint_t **head, listint_t *first, listint_t *second);
 void insertion_sort_list(listint_t **list);
 
 #endif /* SORT_H */
