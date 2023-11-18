@@ -12,7 +12,7 @@ void selection_sort(int *array, size_t size)
 
 	if (array == NULL)
 		return;
-		
+
 	while (sortedCount < size - 1)
 	{
 		minind = minIndex(array, sortedCount, size);
