@@ -10,6 +10,9 @@ void selection_sort(int *array, size_t size)
 	size_t sortedCount = 0;
 	size_t minind;
 
+	if (array == NULL)
+		return;
+
 	while (sortedCount < size - 1)
 	{
 		minind = minIndex(array, sortedCount, size);
