@@ -42,3 +42,19 @@ int minIndex(int *array, size_t start, size_t end)
 	}
 	return (minind);
 }
+
+/**
+* swap_inds - sawaps tow indexes of array
+* @array: the array
+* @ind1: first index to swap
+* @ind2: secound index to swap
+* Return: void
+*/
+void swap_inds(int *array, int ind1, int ind2)
+{
+	int tmp;
+
+	tmp = array[ind2];
+	array[ind2] = array[ind1];
+	array[ind1] = tmp;
+}
