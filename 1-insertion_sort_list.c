@@ -4,26 +4,37 @@
  * insertion_sort_list - uses insertion sort to sort a list
  * @list: a pointer to a doubly linked list
  * Return: nothing
- */
+*/
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current, *tmp;
+	listint_t *current = *list;
+	listint_t *first;
+	listint_t *second;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (current == NULL || current->next == NULL)
 		return;
 
-	current = (*list)->next;
-
-	while (current != NULL)
+	while (current)
 	{
-		tmp = current->prev;
-		while (tmp != NULL && tmp->n > current->n)
+		first = current;
+		second = current->next;
+		while (first)
 		{
-			swap_nodes(list, tmp, current);
-			print_list(*list);
-			tmp = current->prev;
+			if (first->n > second->n)
+			{
+				swap_nodes(list, first, second);
+				first = second->prev;
+				print_list(*list);
+			}
+			else
+			{
+				break;
+			}
 		}
-		current = current->next;
+		if (current->next && current->n < current->next->n)
+			current = current->next;
+		if (!current->next)
+			return;
 	}
 }
 
@@ -33,7 +44,7 @@ void insertion_sort_list(listint_t **list)
  * @first: first node to be swaped
  * @second: second node to be swaped
  * Return: nothing
- */
+*/
 void swap_nodes(listint_t **head, listint_t *first, listint_t *second)
 {
 	if (!first || !second || first->next != second || second->prev != first)
