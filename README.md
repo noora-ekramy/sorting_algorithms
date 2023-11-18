@@ -5,6 +5,7 @@ This repository contains implementations of various sorting algorithms in C.
 ## Implemented Algorithms
 
 0. [Bubble Sort](#bubble-sort)
+1. [Insertion Sort](#insertion-sort)
 2. [Selection Sort](#selection-sort)
 3. [Shell Sort](#shell-sort)
 
@@ -23,6 +24,23 @@ Compile the code:
 ```bash
 gcc -Wall -Wextra -Werror -pedantic  -std=gnu89  0-main.c print_array.c .\0-bubble_sort.c  -o bubble
 ./bubble
+```
+
+## Insertion Sort
+
+### Files
+
+- [1-insertion_sort_list.c](1-insertion_sort_list.c) - Insertion sort implementation.
+- [1-main.c](1-main.c) - Main function to test the Insertion sort.
+- [bubble_sort_complexity](1-O) - Insertion sort complexity analysis.
+
+### Usage
+
+Compile the code:
+
+```bash
+gcc -Wall -Wextra -Werror -pedantic  -std=gnu89 1-main.c 1-insertion_sort_list.c print_list.c -o insertion
+./insertion
 ```
 
 ## Selection Sort
