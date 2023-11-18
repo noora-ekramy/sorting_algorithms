@@ -24,6 +24,7 @@ void insertion_sort_list(listint_t **list)
 			{
 				swap_nodes(list, first, second);
 				first = second->prev;
+				print_list(*list);
 			}
 			else
 			{
