@@ -32,5 +32,8 @@ void shell_sort(int *array, size_t size);
 void swap_nodes(listint_t **head, listint_t *first, listint_t *second);
 void insertion_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void maxHeapify(int *array, size_t size, int idx, size_t n);
+
 
 #endif /* SORT_H */
