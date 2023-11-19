@@ -19,6 +19,7 @@ void maxHeapify(int *array, size_t size, int idx, size_t n)
 	if (largest != idx)
 	{
 		int temp = array[idx];
+
 		array[idx] = array[largest];
 		array[largest] = temp;
 
@@ -45,6 +46,7 @@ void heap_sort(int *array, size_t size)
 	for (i = size - 1; i > 0; --i)
 	{
 		int temp = array[0];
+		
 		array[0] = array[i];
 		array[i] = temp;
 
