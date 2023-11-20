@@ -28,19 +28,27 @@ int partition(int *array, int low, int high, size_t size)
 	int j;
 
 	pivot  = array[high];
-	i = low;
+	i = low - 1;
 
 	for (j = low; j < high; j++)
 	{
-		if (array[j] <= pivot)
+		if (array[j] < pivot)
 		{
-			swap_inds(array, i, j);
 			i++;
+			if (i != j)
+			{
+				swap_inds(array, i, j);
+				print_array(array, size);
+			}
 		}
 	}
-	swap_inds(array, i, high);
-	print_array(array, size);
-	return (i);
+	if (array[high] < array[i + 1])
+	{
+		swap_inds(array, i + 1, high);
+		print_array(array, size);
+	}
+
+	return (i + 1);
 }
 /**
  * recur - recursively calls itself to order quicksort a list
