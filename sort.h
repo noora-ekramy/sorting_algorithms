@@ -36,6 +36,6 @@ void quick_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void maxHeapify(int *array, size_t size, int idx, size_t n);
 int partition(int *array, int low, int high, size_t size);
-void recur(int* array, int low, int high, size_t size);
+void recur(int *array, int low, int high, size_t size);
 
 #endif /* SORT_H */
