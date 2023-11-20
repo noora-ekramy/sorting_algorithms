@@ -28,19 +28,19 @@ int partition(int *array, int low, int high, size_t size)
 	int j;
 
 	pivot  = array[high];
-	i = low - 1;
+	i = low;
 
-	for (j = low; j <= high - 1; j++)
+	for (j = low; j < high; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
-			i++;
 			swap_inds(array, i, j);
+			i++;
 		}
 	}
-	swap_inds(array, i + 1, high);
+	swap_inds(array, i, high);
 	print_array(array, size);
-	return (i + 1);
+	return (i);
 }
 /**
  * recur - recursively calls itself to order quicksort a list
@@ -59,7 +59,6 @@ void recur(int *array, int low, int high, size_t size)
 		i = partition(array, low, high, size);
 		recur(array, low, i - 1, size);
 		recur(array, i + 1, high, size);
-
 	}
 
 }
