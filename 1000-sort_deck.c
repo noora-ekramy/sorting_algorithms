@@ -1,35 +1,46 @@
 #include "deck.h"
 #include <stdlib.h>
+/**
+ * get_val - maps string value to int
+ * @value: string
+ * Return: int value
+ */
 int get_val(const char *value)
 {
 	if (strcmp(value, "Ace") == 0)
-		return 1;
+		return (1);
 	else if (strcmp(value, "2") == 0)
-		return 2;
+		return (2);
 	else if (strcmp(value, "3") == 0)
-		return 3;
+		return (3);
 	else if (strcmp(value, "4") == 0)
-		return 4;
+		return (4);
 	else if (strcmp(value, "5") == 0)
-		return 5;
+		return (5);
 	else if (strcmp(value, "6") == 0)
-		return 6;
+		return (6);
 	else if (strcmp(value, "7") == 0)
-		return 7;
+		return (7);
 	else if (strcmp(value, "8") == 0)
-		return 8;
+		return (8);
 	else if (strcmp(value, "9") == 0)
-		return 9;
+		return (9);
 	else if (strcmp(value, "10") == 0)
-		return 10;
+		return (10);
 	else if (strcmp(value, "Jack") == 0)
-		return 11;
+		return (11);
 	else if (strcmp(value, "Queen") == 0)
-		return 12;
+		return (12);
 	else if (strcmp(value, "King") == 0)
-		return 13;
-	return -1;
+		return (13);
+	return (-1);
 }
+/**
+ * compare_cards - complares nodes
+ * @a: first node
+ * @b: secound node
+ * Return: value of comparason
+ */
 int compare_cards(const void *a, const void *b)
 {
 	const deck_node_t *node_a = *(const deck_node_t **)a;
@@ -39,11 +50,16 @@ int compare_cards(const void *a, const void *b)
 		return node_a->card->kind - node_b->card->kind;
 	return get_val(node_a->card->value) - get_val(node_b->card->value);
 }
-
+/**
+ * sort_deck - sorts a deck of cards
+ * @deck: the cards array
+ * Return: no thing
+ */
 void sort_deck(deck_node_t **deck)
 {
 	int count = 0, i;
 	deck_node_t *current = *deck, **deck_array;
+
 	while (current != NULL)
 	{
 		count++;
