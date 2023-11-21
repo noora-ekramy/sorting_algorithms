@@ -46,7 +46,8 @@ void bitonic_merge(int *array, size_t low, size_t cnt, int dir)
  * @dir: Sorting direction (UP or DOWN)
  * @arr_size: array size
  */
-void bitonic_sort_recursive(int *array, size_t low, size_t cnt, int dir, size_t arr_size)
+void bitonic_sort_recursive(int *array, size_t low, size_t cnt, int dir
+, size_t arr_size)
 {
 	if (cnt > 1)
 	{
