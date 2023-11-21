@@ -47,8 +47,8 @@ int compare_cards(const void *a, const void *b)
 	const deck_node_t *node_b = *(const deck_node_t **)b;
 
 	if (node_a->card->kind != node_b->card->kind)
-		return node_a->card->kind - node_b->card->kind;
-	return get_val(node_a->card->value) - get_val(node_b->card->value);
+		return (node_a->card->kind - node_b->card->kind);
+	return (get_val(node_a->card->value) - get_val(node_b->card->value));
 }
 /**
  * sort_deck - sorts a deck of cards
