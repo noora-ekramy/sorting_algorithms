@@ -44,6 +44,7 @@ void bitonic_merge(int *array, size_t low, size_t cnt, int dir)
  * @low: Starting index of the subarray to be sorted
  * @cnt: Number of elements to be sorted
  * @dir: Sorting direction (UP or DOWN)
+ * @arr_size: array size
  */
 void bitonic_sort_recursive(int *array, size_t low, size_t cnt, int dir, size_t arr_size)
 {
@@ -53,12 +54,12 @@ void bitonic_sort_recursive(int *array, size_t low, size_t cnt, int dir, size_t 
 
 		if (dir >= 1)
 		{
-			printf("Merging [%i/%i] (UP):\n", cnt, arr_size);
+			printf("Merging [%lu/%lu] (UP):\n", cnt, arr_size);
 			print_array(&array[low], cnt);
 		}
 		else
 		{
-			printf("Merging [%i/%i] (DOWN):\n", cnt, arr_size);
+			printf("Merging [%lu/%lu] (DOWN):\n", cnt, arr_size);
 			print_array(&array[low], cnt);
 		}
 
@@ -69,19 +70,20 @@ void bitonic_sort_recursive(int *array, size_t low, size_t cnt, int dir, size_t 
 
 		if (dir <= 0)
 		{
-			printf("Result [%i/%i] (DOWN):\n", cnt, arr_size);
+			printf("Result [%lu/%lu] (DOWN):\n", cnt, arr_size);
 			print_array(&array[low], cnt);
 		}
 		if (dir >= 1)
 		{
-			printf("Result [%i/%i] (UP):\n", cnt, arr_size);
+			printf("Result [%lu/%lu] (UP):\n", cnt, arr_size);
 			print_array(&array[low], cnt);
 		}
 	}
 }
 
 /**
- * bitonic_sort - Sort an array of integers using the Bitonic sort algorithm
+ * bitonic_sort - Sort an array of integers using the
+ *  Bitonic sort algorithm
  * @array: Array to be sorted
  * @size: Number of elements in the array
  */
